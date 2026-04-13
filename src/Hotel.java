@@ -27,7 +27,52 @@ public class Hotel {
             System.out.println();
         }
     }
+    public void listarDisponiveis() {
+        System.out.println("=========================");
+        System.out.println("   Quartos Disponíveis   ");
+        System.out.println("=========================");
 
+        boolean encontrou = false;
+
+        for (int i = 0; i < quartos.size(); i++) {
+            if (quartos.get(i).getDisponibilidade()) {
+
+                System.out.println("Número: " + quartos.get(i).getNumero());
+                System.out.println("Tipo: " + quartos.get(i).getTipo());
+                System.out.println("Disponibilidade: Disponível");
+                System.out.println();
+
+                encontrou = true;
+            }
+        }
+
+        if (!encontrou) {
+            System.out.println("Nenhum quarto disponível.");
+        }
+    }
+    public void listarIndisponiveis() {
+        System.out.println("===========================");
+        System.out.println("   Quartos Indisponíveis   ");
+        System.out.println("===========================");
+
+        boolean encontrou = false;
+
+        for (int i = 0; i < quartos.size(); i++) {
+            if (!quartos.get(i).getDisponibilidade()) {
+
+                System.out.println("Número: " + quartos.get(i).getNumero());
+                System.out.println("Tipo: " + quartos.get(i).getTipo());
+                System.out.println("Disponibilidade: Indisponível");
+                System.out.println();
+
+                encontrou = true;
+            }
+        }
+
+        if (!encontrou) {
+            System.out.println("Nenhum quarto indisponível.");
+        }
+    }
     public void reservaQuarto(int numeroQuarto){
         for (int i = 0; i <quartos.size(); i++){
             if (quartos.get(i).getNumero() == numeroQuarto){
