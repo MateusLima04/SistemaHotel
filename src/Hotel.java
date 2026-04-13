@@ -6,12 +6,14 @@ public class Hotel {
 
     public void adicionarQuarto(Quarto quarto){
         quartos.add(quarto);
+
+        System.out.println("Quarto Cadastrado com Sucesso!");
     }
 
     public void listarQuarto(){
-        System.out.println("===================");
-        System.out.println("   Lista de Quartos");
-        System.out.println("===================");
+        System.out.println("======================");
+        System.out.println("   Lista de Quartos   ");
+        System.out.println("======================");
 
         for (int i = 0; i <quartos.size(); i++){
             System.out.println("Número: " + quartos.get(i).getNumero());
