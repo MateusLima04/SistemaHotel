@@ -15,11 +15,10 @@ public class Main {
 
             System.out.println("[1] - Cadastrar Quarto");
             System.out.println("[2] - Listar Quarto");
-            System.out.println("[3] - Quarto disponíveis");
-            System.out.println("[4] - Quarto indiponíveis");
-            System.out.println("[5] - Reservar Quarto");
-            System.out.println("[6] - Cancelar Quarto");
-            System.out.println("[7] - Sair");
+            System.out.println("[3] - Consultar Disponibilidade");
+            System.out.println("[4] - Reservar Quarto");
+            System.out.println("[5] - Cancelar Quarto");
+            System.out.println("[6] - Sair");
 
             int opcao  = scanner.nextInt();
 
@@ -55,23 +54,33 @@ public class Main {
                     hotel.listarQuarto();
                     break;
                 case 3:
-                    hotel.listarDisponiveis();
+                    System.out.println("Consultar: ");
+                    System.out.println("[1] - Disponível");
+                    System.out.println("[2] - Indisponível");
+                    int tipoDisponivel = scanner.nextInt();
+
+
+                    if (tipoDisponivel == 1){
+                        hotel.listarDisponiveis();
+                    } else if (tipoDisponivel == 2){
+                        hotel.listarIndisponiveis();
+                    }else {
+                        System.out.println("Quarto inválido!");
+                        continue;
+                }
                     break;
                 case 4:
-                    hotel.listarIndisponiveis();
-                    break;
-                case 5:
                     System.out.println("Digite o número do quarto: ");
                     numero = scanner.nextInt();
                     hotel.reservaQuarto(numero);
                     break;
 
-                case 6:
+                case 5:
                     System.out.println("Digite o número do quarto: ");
                     numero = scanner.nextInt();
                     hotel.cancelarReserva(numero);
                     break;
-                case 7:
+                case 6:
                     System.out.println("Programa saindo...");
                     executar = false;
                     break;
