@@ -65,7 +65,7 @@ public class Main {
                     } else if (tipoDisponivel == 2){
                         hotel.listarIndisponiveis();
                     }else {
-                        System.out.println("Quarto inválido!");
+                        System.out.println("Opção inválida!");
                         continue;
                 }
                     break;
