@@ -1,30 +1,77 @@
-# 🏨 Sistema de Hotel
+# 🏨 Sistema de Gestão de Hotel
 
-Um sistema simples de gerenciamento de hotel desenvolvido em **Java**, com funcionalidades voltadas para controle de hóspedes, reservas e quartos.
+Sistema de gerenciamento de quartos desenvolvido em **Java**, com foco na aplicação prática de **Programação Orientada a Objetos (POO)**.  
+
+O projeto simula o controle básico de um hotel, permitindo cadastrar quartos, consultar disponibilidade, realizar reservas e cancelar reservas por meio de um menu interativo via console.
 
 ---
 
-## 📋 Funcionalidades
+## 📌 Objetivo do Projeto
 
-- Cadastro de hóspedes
+Este projeto foi desenvolvido com o objetivo de:
+
+- Praticar conceitos fundamentais de POO
+- Trabalhar com estruturas de dados (`ArrayList`)
+- Aplicar encapsulamento e organização de responsabilidades
+- Simular regras de negócio de um sistema real
+- Desenvolver lógica aplicada a um cenário prático
+
+---
+
+## ⚙️ Funcionalidades
+
+- ✔ Cadastrar quartos
+- ✔ Listar todos os quartos
+- ✔ Consultar quartos disponíveis
+- ✔ Consultar quartos indisponíveis
+- ✔ Reservar quarto
+- ✔ Cancelar reserva
+- ✔ Validação para quartos inexistentes
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+- Java (JDK 8 ou superior)
+- Programação Orientada a Objetos
+- Estrutura de dados `ArrayList`
+- Controle de fluxo com `switch`
+- Entrada de dados com `Scanner`
+
+---
+
+## 🏗 Estrutura do Projeto
+
+```
+SistemaHotel/
+│
+├── Main.java        # Classe principal (menu e interação)
+├── Hotel.java       # Regras de negócio do sistema
+└── Quarto.java      # Modelo da entidade Quarto
+```
+
+### 🔹 Main
+Responsável pelo menu interativo e comunicação com o usuário.
+
+### 🔹 Hotel
+Contém as regras de negócio:
 - Cadastro de quartos
-- Realização de reservas
-- Listagem de hóspedes e reservas
+- Listagens
+- Reserva
 - Cancelamento de reservas
-- Relatórios básicos de ocupação
+
+### 🔹 Quarto
+Classe modelo contendo:
+- Número do quarto
+- Tipo (Simples, Duplo, Luxo)
+- Status de disponibilidade
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Como Executar o Projeto
 
-- **Java** (linguagem principal)
-- **Paradigma Orientado a Objetos**
-- Estruturas de dados básicas (listas, arrays)
+### Clonar o repositório
 
----
-
-## 🚀 Como Executar
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/MateusLima04/SistemaHotel.git
+```bash
+git clone https://github.com/MateusLima04/SistemaHotel.git
+```
