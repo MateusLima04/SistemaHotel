@@ -20,7 +20,6 @@ Um sistema simples de gerenciamento de hotel desenvolvido em **Java**, com funci
 - **Java** (linguagem principal)
 - **Paradigma Orientado a Objetos**
 - Estruturas de dados básicas (listas, arrays)
-- **IDE recomendada:** IntelliJ IDEA ou Eclipse
 
 ---
 
