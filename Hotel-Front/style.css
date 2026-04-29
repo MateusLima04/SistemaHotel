@@ -9,7 +9,14 @@
 
     }
 
-    h2 { margin-top: 0; }
+    h2 { 
+        margin-top: 0;
+        color: #6E7853;
+        margin-bottom: 20px;
+        font-size: 22px;
+        border-bottom: 2px solid #A6AB8B;
+        padding-bottom: 12px;
+    }
 
     .header {
     background: url(../bancoimg/hotel.jpg) no-repeat center center;
@@ -24,15 +31,31 @@
     justify-content: center;
     position: relative;
     }
-    .container div{
+    .container {
+        display: flex;
+        gap: 20px;
+        padding: 30px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .container div {
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
-        direction: space-between;
+        flex: 1;
+        min-width: 300px;
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .container {
-       direction: space-between;
+
+    .container div:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
+
     .header-title {
       font-size: 48px;
       font-weight: bold;
@@ -40,13 +63,27 @@
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
       margin: 0;
     }
-    input, select, button {
-      padding: 10px;
-      margin: 5px 0;
-      width: 30%;
+
+    input, select {
+      padding: 12px;
+      margin: 8px 0;
+      width: 100%;
       border-radius: 8px;
-      border: 1px solid #ccc;
+      border: none;
+      background: rgba(70, 70, 70, 0.1);
       font-size: 14px;
+      transition: 0.3s ease;
+      color: #333;
+    }
+
+    input::placeholder {
+      color: #999;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      background: rgba(70, 70, 70, 0.2);
+      box-shadow: 0 0 8px rgba(110, 120, 83, 0.5);
     }
     
     button {
@@ -55,39 +92,87 @@
       border: none;
       cursor: pointer;
       transition: 0.3s;
+      padding: 12px;
+      margin: 8px 0;
+      width: auto;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    button:hover { background: #A6AB8B; }
+    button:hover { 
+      background: #A6AB8B; 
+      transform: scale(1.02);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
 
     .filtros {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     }
 
-    .filtros button {
-      width: 30;
-      padding: 10px 15px;
-      flex: 1;
+    /* container dos dois botões */
+    .linha-botoes {
+    display: flex;
+    gap: 10px;
     }
 
+    /* agora sim ficam lado a lado */
+    .linha-botoes button {
+    flex: 1;
+    width: auto; /* quebra o width:100% */
+    }
+    
     table {
-      width: 80%;
+      width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    th, td {
-      padding: 12px;
-      border-bottom: 1px solid #eee;
+    thead {
+      background: linear-gradient(135deg, #6E7853 0%, #8B9370 100%);
+      color: white;
     }
 
-    tr {
-      transition: all 0.4s ease;
+    th {
+      padding: 16px;
+      text-align: left;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #e0e0e0;
+      color: #333;
+    }
+
+    tbody tr {
+      transition: all 0.3s ease;
+      background: #fafafa;
+    }
+
+    tbody tr:hover {
+      background: #f0f0f0;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
     }
 
     .novo {
       animation: aparecer 0.5s ease;
+      background: #E8F5E9 !important;
     }
 
     @keyframes aparecer {
@@ -96,14 +181,14 @@
     }
 
     .reservado {
-      background: #e6fffa;
-      color: green;
-      font-weight: bold;
+      background: #FFEBEE !important;
+      color: #c62828;
+      font-weight: 600;
     }
 
     .reservado::before {
-      content: "→ ";
-      color: green;
+      content: "🔒 ";
+      margin-right: 5px;
     }
 
     .removendo {

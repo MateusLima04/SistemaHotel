@@ -31,14 +31,19 @@
     <button onclick="cancelar()">Cancelar Reserva</button>
   </div>
 
-  <div class="listar">
-    <h2>Lista de Quartos</h2>
     <div class="filtros">
-      <button onclick="listarDisponiveis()">Quartos Disponíveis</button>
-      <button onclick="listarIndisponiveis()">Quartos Indisponíveis</button>
-      <button onclick="listarTodos()">Todos os Quartos</button>
+        <h2>Consultar Quartos</h2>
+    <button onclick="listarTodos()">Todos os Quartos</button>
+
+    <div class="linha-botoes">
+        <button onclick="listarDisponiveis()">Disponíveis</button>
+        <button onclick="listarIndisponiveis()">Indisponíveis</button>
     </div>
-    <table>
+    </div>
+</div>
+
+    <div>
+        <table>
       <thead>
         <tr>
           <th>Número</th>
@@ -48,9 +53,7 @@
       </thead>
       <tbody id="tabelaQuartos"></tbody>
     </table>
-  </div>
-
-</div>
+    </div>
 
   <script src="script.js"></script>
 </body>
