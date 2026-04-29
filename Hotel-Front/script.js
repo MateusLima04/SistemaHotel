@@ -1,5 +1,5 @@
- let quartos = JSON.parse(localStorage.getItem("quartos")) || [];
- let filtroAtual = "todos";
+let quartos = JSON.parse(localStorage.getItem("quartos")) || [];
+let filtroAtual = "todos";
 
 function render() {
   const tabela = document.getElementById("tabelaQuartos");
@@ -46,8 +46,8 @@ function render() {
   localStorage.setItem("quartos", JSON.stringify(quartos));
 
   window.onload = function () {
-  render();
-    };
+    render();
+  };
 
 }
 

@@ -1,26 +1,28 @@
-    *{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        background: #4C5037;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-    }
+  body {
+    background: #4C5037;
 
-    h2 { 
-        margin-top: 0;
-        color: #6E7853;
-        margin-bottom: 20px;
-        font-size: 22px;
-        border-bottom: 2px solid #A6AB8B;
-        padding-bottom: 12px;
-    }
+  }
 
-    .header {
+  h2 {
+    margin-top: 0;
+    color: #6E7853;
+    margin-bottom: 20px;
+    font-size: 22px;
+    border-bottom: 2px solid #A6AB8B;
+    padding-bottom: 12px;
+  }
+
+  .header {
     background: url(../bancoimg/hotel.jpg) no-repeat center center;
-    background-size: cover; /* 👈 ESSENCIAL */
+    background-size: cover;
+    /* 👈 ESSENCIAL */
     background-attachment: fixed;
     width: 100%;
     height: 200px;
@@ -30,170 +32,163 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    }
-    .container {
-        display: flex;
-        gap: 20px;
-        padding: 30px;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
+  }
 
-    .container div {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        min-width: 300px;
-        background: white;
-        border-radius: 12px;
-        padding: 25px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  .container {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
-    .container div:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    }
+  .container div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-    .header-title {
-      font-size: 48px;
-      font-weight: bold;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-      margin: 0;
-    }
+  .container div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
 
-    input, select {
-      padding: 12px;
-      margin: 8px 0;
-      width: 100%;
-      border-radius: 8px;
-      border: none;
-      background: rgba(70, 70, 70, 0.1);
-      font-size: 14px;
-      transition: 0.3s ease;
-      color: #333;
-    }
+  .header-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin: 0;
+  }
 
-    input::placeholder {
-      color: #999;
-    }
+  input,
+  select {
+    padding: 12px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    background: rgba(70, 70, 70, 0.1);
+    font-size: 14px;
+    transition: 0.3s ease;
+    color: #333;
+  }
 
-    input:focus, select:focus {
-      outline: none;
-      background: rgba(70, 70, 70, 0.2);
-      box-shadow: 0 0 8px rgba(110, 120, 83, 0.5);
-    }
-    
-    button {
-      background: #6E7853;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-      padding: 12px;
-      margin: 8px 0;
-      width: auto;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-    }
+  input::placeholder {
+    color: #999;
+  }
 
-    button:hover { 
-      background: #A6AB8B; 
-      transform: scale(1.02);
-    }
+  input:focus,
+  select:focus {
+    outline: none;
+    background: rgba(70, 70, 70, 0.2);
+    box-shadow: 0 0 8px rgba(110, 120, 83, 0.5);
+  }
 
-    button:active {
-      transform: scale(0.98);
-    }
+  button {
+    background: #6E7853;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 12px;
+    margin: 8px 0;
+    width: auto;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
 
-    .filtros {
+  button:hover {
+    background: #A6AB8B;
+    transform: scale(1.02);
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .filtros {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    }
+  }
 
-    /* container dos dois botões */
-    .linha-botoes {
+  /* container dos dois botões */
+  .linha-botoes {
     display: flex;
     gap: 10px;
-    }
+  }
 
-    /* agora sim ficam lado a lado */
-    .linha-botoes button {
+  /* agora sim ficam lado a lado */
+  .linha-botoes button {
     flex: 1;
-    width: auto; /* quebra o width:100% */
-    }
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
+    width: auto;
+    /* quebra o width:100% */
+  }
 
-    thead {
-      background: linear-gradient(135deg, #6E7853 0%, #8B9370 100%);
-      color: white;
-    }
+  /* TABELA */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
 
-    th {
-      padding: 16px;
-      text-align: left;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 0.5px;
-    }
+  border-radius: 8px;
+  overflow: hidden;
 
-    td {
-      padding: 14px 16px;
-      border-bottom: 1px solid #e0e0e0;
-      color: #333;
-    }
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-    tbody tr {
-      transition: all 0.3s ease;
-      background: #fafafa;
-    }
+thead {
+  background: linear-gradient(135deg, #6E7853, #8B9370);
+  color: white;
+}
 
-    tbody tr:hover {
-      background: #f0f0f0;
-      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+}
 
-    tbody tr:last-child td {
-      border-bottom: none;
-    }
+tbody tr {
+  background: #fafafa;
+  transition: 0.3s;
+}
 
-    .novo {
-      animation: aparecer 0.5s ease;
-      background: #E8F5E9 !important;
-    }
+tbody tr:hover {
+  background: #f0f0f0;
+}
 
-    @keyframes aparecer {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+/* ESTADOS */
+.novo {
+  animation: aparecer 0.5s ease;
+  background: #E8F5E9 !important;
+}
 
-    .reservado {
-      background: #FFEBEE !important;
-      color: #c62828;
-      font-weight: 600;
-    }
+.reservado {
+  background: #FFEBEE !important;
+  color: #c62828;
+  font-weight: 600;
+}
 
-    .reservado::before {
-      content: "🔒 ";
-    }
+.reservado::before {
+  content: "🔒 ";
+}
 
-    .removendo {
-      animation: sumir 0.6s forwards;
-    }
+.removendo {
+  animation: sumir 0.6s forwards;
+}
 
-    @keyframes sumir {
-      to { opacity: 0; transform: translateX(50px); }
-    }
+/* ANIMAÇÕES */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes sumir {
+  to { opacity: 0; transform: translateX(50px); }
+}
