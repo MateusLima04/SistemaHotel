@@ -188,7 +188,6 @@
 
     .reservado::before {
       content: "🔒 ";
-      margin-right: 5px;
     }
 
     .removendo {
