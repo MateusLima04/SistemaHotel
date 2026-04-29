@@ -1,0 +1,115 @@
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background: #4C5037;
+
+    }
+
+    h2 { margin-top: 0; }
+
+    .header {
+    background: url(../bancoimg/hotel.jpg) no-repeat center center;
+    background-size: cover; /* 👈 ESSENCIAL */
+    background-attachment: fixed;
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    }
+    .container div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        direction: space-between;
+    }
+    .container {
+       direction: space-between;
+    }
+    .header-title {
+      font-size: 48px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      margin: 0;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 5px 0;
+      width: 30%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    
+    button {
+      background: #6E7853;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover { background: #A6AB8B; }
+
+    .filtros {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .filtros button {
+      width: 30;
+      padding: 10px 15px;
+      flex: 1;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    tr {
+      transition: all 0.4s ease;
+    }
+
+    .novo {
+      animation: aparecer 0.5s ease;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reservado {
+      background: #e6fffa;
+      color: green;
+      font-weight: bold;
+    }
+
+    .reservado::before {
+      content: "→ ";
+      color: green;
+    }
+
+    .removendo {
+      animation: sumir 0.6s forwards;
+    }
+
+    @keyframes sumir {
+      to { opacity: 0; transform: translateX(50px); }
+    }
